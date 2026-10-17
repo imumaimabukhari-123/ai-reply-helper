@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Try it · AI Reply Helper</title>
+  <meta name="description" content="Paste a message, choose a tone and get 3 ready-to-send replies written by AI.">
+  <meta name="author" content="Syeda Umaima">
+  <link rel="icon" href="/static/icon.png">
+  <link rel="stylesheet" href="/static/site.css">
+  <link rel="stylesheet" href="/extension/helper.css">
+  <style>
+    .layout { display: grid; grid-template-columns: 1fr 300px; gap: 28px; align-items: start; padding: 40px 0 56px; }
+    @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+    h1 { font-size: clamp(26px, 4vw, 36px); margin: 0 0 8px; letter-spacing: -0.02em; }
+    .lead { margin: 0 0 22px; color: var(--muted); }
+    #app { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+    .side .card { margin-bottom: 14px; }
+    .side button.ex { display: block; width: 100%; text-align: left; border: 1px solid var(--line); background: var(--bg); color: var(--text);
+      border-radius: 10px; padding: 9px 11px; margin-top: 8px; font: inherit; font-size: 13.5px; cursor: pointer; }
+    .side button.ex:hover { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/"><img class="brand-mark" src="/static/icon.png" alt=""><span>AI Reply Helper</span></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/try" class="active">Try it</a>
+        <a href="/guide">Guide</a>
+        <a href="/#developer">Developer</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <div class="layout">
+      <div>
+        <h1>Try the AI Reply Helper</h1>
+        <p class="lead">Paste a message you received, choose a tone, and get 3 replies. The extension does the same on any website, without copy-pasting.</p>
+        <div id="app"></div>
+      </div>
+      <aside class="side">
+        <div class="card">
+          <h3>No message handy? Try one:</h3>
+          <button class="ex" type="button">Hi! Can we move tomorrow's meeting to Thursday? Let me know what time works for you. Thanks, Ahmed</button>
+          <button class="ex" type="button">Your order arrived damaged and I want a refund. This is really disappointing.</button>
+          <button class="ex" type="button">Hey!! Are you coming to my birthday party on Saturday? 🎉</button>
+          <button class="ex" type="button">Bonjour, est-ce que vous livrez au Canada ? Merci !</button>
+        </div>
+        <div class="card">
+          <h3>Get the extension</h3>
+          <p>Select text on any page and click the icon, or right-click → <b>Reply to this with AI</b>.</p>
+          <p style="margin-top:10px"><a class="btn primary" href="/static/ai-reply-helper.zip" download>⬇ Download</a></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    © 2026 Syeda Umaima · AI Reply Helper ·
+    <a href="mailto:imumaimabukhari@gmail.com">imumaimabukhari@gmail.com</a> ·
+    <a href="https://www.fiverr.com/umaima886" target="_blank" rel="noopener">Fiverr</a> ·
+    <a href="/privacy">Privacy</a>
+  </footer>
+
+  <script src="/extension/helper.js"></script>
+  <script>
+    const load = () => { try { return JSON.parse(localStorage.getItem("arh-prefs") || "{}"); } catch { return {}; } };
+    const mount = (message) => ARH.mount(document.getElementById("app"), {
+      api: "", message, prefs: load(),
+      save: (p) => { try { localStorage.setItem("arh-prefs", JSON.stringify(p)); } catch {} },
+    });
+    mount("");
+    document.querySelectorAll(".ex").forEach((b) => b.addEventListener("click", () => {
+      document.getElementById("arh-msg").value = b.textContent;
+      document.getElementById("app").scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
+  </script>
+</body>
+</html>

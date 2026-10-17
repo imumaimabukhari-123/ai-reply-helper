@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Reply Helper</title>
+  <meta name="description" content="A free Chrome extension: select a message on any website and get 3 ready-to-send replies in the tone you choose.">
+  <meta name="author" content="Syeda Umaima">
+  <link rel="icon" href="/static/icon.png">
+  <link rel="stylesheet" href="/static/site.css">
+  <style>
+    .hero { padding: 56px 0 32px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero .cta { justify-content: center; } }
+    .pill { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .hero h1 { font-size: clamp(30px, 4.6vw, 46px); line-height: 1.12; margin: 0 0 16px; letter-spacing: -0.02em; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { font-size: 18px; color: var(--muted); margin: 0 0 24px; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero small { display: block; margin-top: 12px; color: var(--muted); }
+    .shot { width: 100%; max-width: 400px; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(0,0,0,.25); justify-self: center; }
+    .highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 64px; }
+    @media (max-width: 760px) { .highlights { grid-template-columns: repeat(2, 1fr); } }
+    .highlight { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; text-align: center; }
+    .highlight b { display: block; font-size: 24px; line-height: 1.2; color: var(--accent); }
+    .highlight span { color: var(--muted); font-size: 13px; }
+    .example { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 760px) { .example { grid-template-columns: 1fr; } }
+    .bubble { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+    .bubble small { display: block; color: var(--muted); font-weight: 600; margin-bottom: 6px; }
+    .bubble p { margin: 0; white-space: pre-line; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/"><img class="brand-mark" src="/static/icon.png" alt=""><span>AI Reply Helper</span></a>
+      <div class="nav-links">
+        <a href="/" class="active">Home</a>
+        <a href="/try">Try it</a>
+        <a href="/guide">Guide</a>
+        <a href="/#developer">Developer</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="hero">
+      <div>
+        <div class="pill">Free Chrome extension · no sign-up</div>
+        <h1>Never stare at a message<br><span>wondering what to reply.</span></h1>
+        <p>Select a message on any website (email, chat, comments, reviews) and get 3 ready-to-send replies
+           in the tone you want. Copy, paste, done.</p>
+        <div class="cta">
+          <a class="btn primary" href="/static/ai-reply-helper.zip" download>⬇ Download the extension</a>
+          <a class="btn" href="/try">Try it online</a>
+        </div>
+        <small>Works with Chrome, Edge and Brave · <a href="/guide#install">How to install</a></small>
+      </div>
+      <img class="shot" src="/static/preview.png" width="400" height="760" alt="The extension popup with a message, the Friendly tone selected and 3 AI replies">
+    </header>
+
+    <div class="highlights">
+      <div class="highlight"><b>3</b><span>reply options every time</span></div>
+      <div class="highlight"><b>5</b><span>tones to choose from</span></div>
+      <div class="highlight"><b>Any</b><span>language, answered in kind</span></div>
+      <div class="highlight"><b>0</b><span>made-up facts</span></div>
+    </div>
+
+    <section id="example">
+      <h2>See it in action</h2>
+      <p class="sub">A real reply, written by the helper with the Friendly tone and "Say yes".</p>
+      <div class="example">
+        <div class="bubble"><small>📩 You received</small><p>Hi! Could you send me the invoice for last month's work by Friday? Thanks, Maria</p></div>
+        <div class="bubble"><small>✨ Option 2 (added detail: "I'll send it on Thursday")</small><p>Hey Maria,
+
+No problem at all! I will send it on Thursday as requested. Let me know if you need anything else before then.
+
+Cheers,
+[Your Name]</p></div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>How it works</h2>
+      <p class="sub">Three clicks from message to reply.</p>
+      <div class="grid three">
+        <div class="card"><div class="num">1</div><h3>Select the message</h3><p>Highlight the text on any page, then click the 💬 icon, or right-click → <b>Reply to this with AI</b>.</p></div>
+        <div class="card"><div class="num">2</div><h3>Choose how to reply</h3><p>Pick a tone (Professional, Friendly, Short, Formal, Enthusiastic) and what you want to say.</p></div>
+        <div class="card"><div class="num">3</div><h3>Copy your favourite</h3><p>You get 3 different replies. Click <b>Copy</b> and paste it where you're replying.</p></div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>Features</h2>
+      <p class="sub">Small, fast and respectful of your privacy.</p>
+      <div class="grid three">
+        <div class="card"><div class="icon">🎭</div><h3>5 tones</h3><p>From formal letters to quick friendly chats. Your last choice is remembered.</p></div>
+        <div class="card"><div class="icon">🎯</div><h3>Say what you mean</h3><p>Accept, politely decline, ask for details, say thanks, or "I'll get back to you".</p></div>
+        <div class="card"><div class="icon">📝</div><h3>Add your details</h3><p>Type a fact like "I'm free Friday after 2pm" and it goes into the reply. It never invents dates or prices.</p></div>
+        <div class="card"><div class="icon">🌍</div><h3>Any language</h3><p>A message in French, Urdu or Spanish gets replies in the same language.</p></div>
+        <div class="card"><div class="icon">🖱️</div><h3>Right-click menu</h3><p>Select text, right-click, and the helper opens with the message already filled in.</p></div>
+        <div class="card"><div class="icon">🔒</div><h3>Private</h3><p>It only reads the text you select, only when you ask. Nothing is stored.</p></div>
+      </div>
+    </section>
+
+    <section id="tech">
+      <h2>Built with</h2>
+      <p class="sub">Free tools only.</p>
+      <div class="chips">
+        <span class="chip"><b>Chrome Extension</b> Manifest V3</span>
+        <span class="chip"><b>JavaScript</b> popup &amp; context menu</span>
+        <span class="chip"><b>Python</b> + FastAPI</span>
+        <span class="chip"><b>Gemini</b> AI (free tier)</span>
+        <span class="chip"><b>Vercel</b> hosting</span>
+      </div>
+    </section>
+
+    <section id="developer">
+      <h2>Developer</h2>
+      <p class="sub">Who built this project, and how to work with me.</p>
+      <div class="dev-card">
+        <div class="avatar">SU</div>
+        <div class="dev-text">
+          <h3>Syeda Umaima</h3>
+          <p class="role">Software engineer · Chrome extensions, AI tools, Shopify stores and web apps</p>
+          <p class="pitch">I build Chrome extensions and AI tools like this one. Need a custom extension or an AI
+             feature for your business? I can build it for you.</p>
+          <div class="dev-buttons">
+            <a class="btn primary" href="https://www.fiverr.com/umaima886" target="_blank" rel="noopener">Hire me on Fiverr</a>
+            <a class="btn" href="mailto:imumaimabukhari@gmail.com?subject=Chrome%20extension%20project">✉ Email me</a>
+            <a class="btn" href="https://github.com/imumaimabukhari-123" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <ul class="contact">
+            <li>✉️ Email: <a href="mailto:imumaimabukhari@gmail.com">imumaimabukhari@gmail.com</a></li>
+            <li>💼 Fiverr: <a href="https://www.fiverr.com/umaima886" target="_blank" rel="noopener">fiverr.com/umaima886</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-foot">
+    © 2026 Syeda Umaima · AI Reply Helper ·
+    <a href="mailto:imumaimabukhari@gmail.com">imumaimabukhari@gmail.com</a> ·
+    <a href="https://www.fiverr.com/umaima886" target="_blank" rel="noopener">Fiverr</a> ·
+    <a href="/privacy">Privacy</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* Reply panel styles, shared by the extension popup and the website. Scoped to .arh. */
+.arh {
+  --a-bg: #f4f8f9; --a-panel: #ffffff; --a-text: #142024; --a-muted: #5d6e73; --a-line: #dde7ea;
+  --a-accent: #0e7490; --a-accent-soft: #e0f4f8; --a-on-accent: #ffffff; --a-red: #c62828; --a-red-soft: #fdecec;
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--a-text);
+}
+@media (prefers-color-scheme: dark) {
+  .arh {
+    --a-bg: #0f1719; --a-panel: #172124; --a-text: #e4eef0; --a-muted: #94a8ad; --a-line: #263438;
+    --a-accent: #22d3ee; --a-accent-soft: #11343c; --a-on-accent: #06262d; --a-red: #ff8a8a; --a-red-soft: #3d1c1c;
+  }
+}
+.arh * { box-sizing: border-box; }
+.arh label.lbl { display: block; font-size: 12.5px; font-weight: 600; color: var(--a-muted); margin: 0 0 5px; }
+.arh textarea, .arh input[type=text], .arh select {
+  width: 100%; border: 1px solid var(--a-line); border-radius: 10px; padding: 9px 11px;
+  font: inherit; background: var(--a-panel); color: var(--a-text);
+}
+.arh textarea { resize: vertical; min-height: 96px; }
+.arh textarea:focus, .arh input[type=text]:focus, .arh select:focus { outline: 2px solid var(--a-accent); border-color: transparent; }
+.arh .field { margin-bottom: 12px; }
+.arh .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.arh .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.arh .chip {
+  border: 1px solid var(--a-line); background: var(--a-panel); color: var(--a-text); border-radius: 99px;
+  padding: 5px 11px; font: inherit; font-size: 13px; cursor: pointer;
+}
+.arh .chip[aria-pressed="true"] { background: var(--a-accent); border-color: var(--a-accent); color: var(--a-on-accent); font-weight: 600; }
+.arh .btn {
+  border: 0; border-radius: 10px; padding: 10px 16px; font: inherit; font-weight: 600; cursor: pointer;
+  background: var(--a-accent); color: var(--a-on-accent); width: 100%;
+}
+.arh .btn:disabled { opacity: .6; cursor: default; }
+.arh .btn.small { width: auto; padding: 5px 12px; font-size: 13px; }
+.arh .btn.ghost { background: var(--a-accent-soft); color: var(--a-accent); }
+.arh .hint { font-size: 12px; color: var(--a-muted); margin-top: 4px; }
+.arh .results { margin-top: 14px; display: grid; gap: 10px; }
+.arh .reply { background: var(--a-panel); border: 1px solid var(--a-line); border-radius: 12px; padding: 12px; }
+.arh .reply .text { white-space: pre-wrap; word-wrap: break-word; margin: 0 0 10px; }
+.arh .reply .bar { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.arh .reply .opt { font-size: 12px; color: var(--a-muted); font-weight: 600; }
+.arh .error { background: var(--a-red-soft); color: var(--a-red); border-radius: 10px; padding: 10px 12px; margin-top: 12px; }
+.arh .loading { text-align: center; color: var(--a-muted); padding: 18px 0 6px; }
+.arh .spinner { width: 26px; height: 26px; border: 3px solid var(--a-line); border-top-color: var(--a-accent); border-radius: 50%; margin: 0 auto 8px; animation: arh-spin .8s linear infinite; }
+@keyframes arh-spin { to { transform: rotate(360deg); } }
+.arh .lang { font-size: 12px; color: var(--a-muted); }

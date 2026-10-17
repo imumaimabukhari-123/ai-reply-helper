@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "AI Reply Helper",
+  "version": "1.0.0",
+  "description": "Select a message on any website and get 3 ready-to-send replies in the tone you choose.",
+  "action": {
+    "default_title": "Write a reply with AI",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "background": { "service_worker": "background.js" },
+  "permissions": ["activeTab", "scripting", "contextMenus", "storage"],
+  "author": "Syeda Umaima"
+}

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guide · AI Reply Helper</title>
+  <meta name="description" content="How to install and use the AI Reply Helper Chrome extension, step by step.">
+  <meta name="author" content="Syeda Umaima">
+  <link rel="icon" href="/static/icon.png">
+  <link rel="stylesheet" href="/static/site.css">
+  <style>
+    .wrap.narrow { max-width: 820px; padding-bottom: 40px; }
+    .intro { padding: 48px 0 24px; }
+    .intro h1 { font-size: clamp(28px, 4vw, 38px); margin: 0 0 10px; letter-spacing: -0.02em; }
+    .intro p { color: var(--muted); font-size: 17px; margin: 0; }
+    .toc { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 40px; }
+    .toc b { display: block; margin-bottom: 6px; }
+    .toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+    @media (max-width: 600px) { .toc ol { columns: 1; } }
+    .toc a { text-decoration: none; }
+    section { margin-bottom: 44px; }
+    h2 { font-size: 23px; margin: 0 0 14px; }
+    .step { display: flex; gap: 14px; margin-bottom: 18px; }
+    .step > div:last-child { min-width: 0; }
+    .step .n { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; }
+    .step h3 { margin: 4px 0 4px; font-size: 17px; }
+    .step p { margin: 0 0 6px; }
+    details.faq { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin-bottom: 10px; }
+    details.faq summary { cursor: pointer; font-weight: 600; }
+    details.faq p { margin: 10px 0 0; color: var(--muted); }
+    .end { text-align: center; padding: 8px 0 24px; }
+    .end .btn { margin: 4px; }
+    code { font: 14px ui-monospace, Consolas, monospace; background: var(--panel); border: 1px solid var(--line); border-radius: 5px; padding: 0 5px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/"><img class="brand-mark" src="/static/icon.png" alt=""><span>AI Reply Helper</span></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/try">Try it</a>
+        <a href="/guide" class="active">Guide</a>
+        <a href="/#developer">Developer</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap narrow">
+    <header class="intro">
+      <h1>How to use the AI Reply Helper</h1>
+      <p>Install it in a minute, then reply to any message in three clicks. No coding needed.</p>
+    </header>
+
+    <nav class="toc" aria-label="On this page">
+      <b>On this page</b>
+      <ol>
+        <li><a href="#install">Installing the extension</a></li>
+        <li><a href="#use">Writing a reply</a></li>
+        <li><a href="#options">Tones and options</a></li>
+        <li><a href="#tips">Tips for better replies</a></li>
+        <li><a href="#problems">Fixing problems</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <section id="install">
+      <h2>1. Installing the extension</h2>
+      <p>Works in Google Chrome, Microsoft Edge and Brave on a computer.</p>
+      <div class="step"><div class="n">1</div><div><h3>Download and unzip</h3>
+        <p>On the <a href="/">home page</a>, click <b>Download the extension</b>. In your <b>Downloads</b> folder, right-click
+           <code>ai-reply-helper.zip</code> → <b>Extract All…</b> → <b>Extract</b>.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Open the extensions page</h3>
+        <p>Type <code>chrome://extensions</code> in the address bar and press <kbd>Enter</kbd> (Edge: <code>edge://extensions</code>).</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Turn on Developer mode</h3>
+        <p>Switch on <b>Developer mode</b> in the top-right corner.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Load the folder</h3>
+        <p>Click <b>Load unpacked</b> and choose the unzipped <b>ai-reply-helper</b> folder (the one with <code>manifest.json</code> inside).</p></div></div>
+      <div class="step"><div class="n">5</div><div><h3>Pin it</h3>
+        <p>Click the puzzle icon 🧩 next to the address bar, then the pin 📌 next to <b>AI Reply Helper</b>.</p></div></div>
+      <div class="tip">💡 Keep the unzipped folder. If you delete it, Chrome removes the extension.</div>
+    </section>
+
+    <section id="use">
+      <h2>2. Writing a reply</h2>
+      <div class="step"><div class="n">1</div><div><h3>Select the message</h3>
+        <p>On any website (Gmail, LinkedIn, a review, a comment…), highlight the message with your mouse.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Open the helper</h3>
+        <p>Click the 💬 icon in your toolbar, <b>or</b> right-click the selected text and choose <b>Reply to this with AI</b>.
+           The message is filled in for you. (No selection? Paste the message into the box.)</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Choose the tone and goal</h3>
+        <p>Pick a tone, choose what you want to say, and optionally add a detail. Then click <b>Write 3 replies</b>.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Copy and send</h3>
+        <p>Click <b>Copy</b> under the reply you like, then paste it (<kbd>Ctrl</kbd> + <kbd>V</kbd>) where you're replying.
+           Not quite right? Click <b>Try different replies</b>.</p></div></div>
+    </section>
+
+    <section id="options">
+      <h2>3. Tones and options</h2>
+      <table>
+        <thead><tr><th>Option</th><th>Choices</th></tr></thead>
+        <tbody>
+          <tr><td><b>Tone</b></td><td>💼 Professional · 😊 Friendly · ⚡ Short · 🎩 Formal · 🎉 Enthusiastic</td></tr>
+          <tr><td><b>What do you want to say?</b></td><td>Let AI decide · Say yes / accept · Politely say no · Ask for more details · Say thank you · I'll get back to you</td></tr>
+          <tr><td><b>Length</b></td><td>Short (under 40 words) · Medium (40–90) · Long (90–160)</td></tr>
+          <tr><td><b>Add a detail</b></td><td>Any fact the reply should include, e.g. "I can deliver in 5 days" or "the price is $80".</td></tr>
+        </tbody>
+      </table>
+      <p>Your tone, goal and length are remembered for next time.</p>
+    </section>
+
+    <section id="tips">
+      <h2>4. Tips for better replies</h2>
+      <ul>
+        <li><b>Select the whole message</b>, including the sender's name, so the reply can greet them.</li>
+        <li><b>Add the facts you know.</b> The helper won't invent dates, prices or promises. It writes <code>[date]</code> instead, so you can fill it in.</li>
+        <li><b>Check before sending.</b> Replace placeholders like <code>[Your Name]</code> and make sure it says what you mean.</li>
+        <li>For a reply in another language, just select a message in that language.</li>
+      </ul>
+    </section>
+
+    <section id="problems">
+      <h2>5. Fixing problems</h2>
+      <table>
+        <thead><tr><th>Problem</th><th>What to do</th></tr></thead>
+        <tbody>
+          <tr><td>The message box is empty</td><td>Some pages (like the Chrome Web Store or PDF files) can't be read. Copy the message and paste it into the box.</td></tr>
+          <tr><td>No "Reply to this with AI" in the right-click menu</td><td>You need to select some text first. If it still doesn't show, reload the page.</td></tr>
+          <tr><td>"Couldn't reach the AI"</td><td>Check your internet connection and try again.</td></tr>
+          <tr><td>"The free AI quota is busy right now"</td><td>Wait a minute and try again.</td></tr>
+          <tr><td>"You've reached the hourly limit"</td><td>This free tool allows about 40 requests per hour. Try again later.</td></tr>
+          <tr><td>"Manifest file is missing" when loading</td><td>Select the folder that directly contains <code>manifest.json</code>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="faq">
+      <h2>6. FAQ</h2>
+      <details class="faq"><summary>Is it free?</summary><p>Yes. It runs on Google Gemini's free tier, with fair-use limits per hour.</p></details>
+      <details class="faq"><summary>Does it send my emails anywhere?</summary><p>Only the text you select, and only when you click <b>Write 3 replies</b>. It's sent to the AI to write the replies and not stored. See the <a href="/privacy">privacy page</a>.</p></details>
+      <details class="faq"><summary>Does it send the reply for me?</summary><p>No. You always choose, copy and send the reply yourself.</p></details>
+      <details class="faq"><summary>Can you build a custom extension for me?</summary><p>Yes. See the <a href="/#developer">Developer</a> section.</p></details>
+    </section>
+
+    <div class="end">
+      <a class="btn primary" href="/static/ai-reply-helper.zip" download>⬇ Download the extension</a>
+      <a class="btn" href="/try">Try it online</a>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    © 2026 Syeda Umaima · AI Reply Helper ·
+    <a href="mailto:imumaimabukhari@gmail.com">imumaimabukhari@gmail.com</a> ·
+    <a href="https://www.fiverr.com/umaima886" target="_blank" rel="noopener">Fiverr</a> ·
+    <a href="/privacy">Privacy</a>
+  </footer>
+</body>
+</html>
