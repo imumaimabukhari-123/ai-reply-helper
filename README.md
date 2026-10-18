@@ -2,7 +2,7 @@
 
 A Chrome extension that writes replies for you. **Select a message on any website**, pick a tone, and get **3 ready-to-send replies**. Copy the one you like and paste it.
 
-**Live site:** _coming soon_ · Download the extension, or try it online without installing anything.
+**Live site:** https://ai-reply-helper-psi.vercel.app · [Download the extension](https://ai-reply-helper-psi.vercel.app/static/ai-reply-helper.zip), or [try it online](https://ai-reply-helper-psi.vercel.app/try) without installing anything.
 
 <p><img src="docs/popup.png" width="380" alt="The extension popup: a message from Maria, the Friendly tone selected, and 3 AI replies with Copy buttons"></p>
 
@@ -34,7 +34,7 @@ The same reply panel (`extension/helper.js`) is used by the extension and by the
 
 ## Install the extension
 
-1. Download `ai-reply-helper.zip` from the website and unzip it.
+1. Download [ai-reply-helper.zip](https://ai-reply-helper-psi.vercel.app/static/ai-reply-helper.zip) from the website and unzip it.
 2. Open `chrome://extensions` and turn on **Developer mode**.
 3. Click **Load unpacked** and select the unzipped folder.
 4. Pin the 💬 icon.
